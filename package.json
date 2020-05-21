@@ -1,0 +1,10 @@
+{
+  "name": "angle-bracket",
+  "version": "0.0.1",
+  "description": "An HTML library exposed through a DOM",
+  "main": "index.js",
+  "author": "Cole Johnson",
+  "license": "MIT",
+  "dependencies": {},
+  "devDependencies": {}
+}
