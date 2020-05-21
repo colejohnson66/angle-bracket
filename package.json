@@ -5,6 +5,10 @@
   "main": "index.js",
   "author": "Cole Johnson",
   "license": "MIT",
-  "dependencies": {},
-  "devDependencies": {}
+  "dependencies": {
+    "@types/node": "^14.0.5"
+  },
+  "devDependencies": {
+    "typescript": "^3.9.3"
+  }
 }
