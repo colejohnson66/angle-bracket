@@ -1,7 +1,6 @@
-import { HTMLCollection } from "../base/index";
 import HTMLElement from "./HTMLElement";
 
-/* https://html.spec.whatwg.org/multipage/tables.html#the-tr-element
+/* https://html.spec.whatwg.org/multipage/tables.html#the-td-element
  *
  * [Exposed=Window]
  * interface HTMLTableCellElement : HTMLElement {
