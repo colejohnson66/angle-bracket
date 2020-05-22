@@ -1,3 +1,4 @@
+// https://infra.spec.whatwg.org/#namespaces
 export const namespaces = {
     html: "http://www.w3.org/1999/xhtml",
     mathml: "http://www.w3.org/1998/Math/MathML",
