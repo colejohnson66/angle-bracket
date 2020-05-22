@@ -3,5 +3,8 @@
         "noncharacter",
         "uppercased",
         "xlink"
-    ]
+    ],
+    "editor.codeActionsOnSave": {
+        "source.fixAll": true
+    }
 }
