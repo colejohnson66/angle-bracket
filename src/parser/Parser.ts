@@ -1,6 +1,6 @@
-import InsertionMode from "./mode";
-import Tokenizer from "../tokenizer";
-import TokenizerState from "../tokenizer/state";
+import InsertionMode from "./ParseMode";
+import Tokenizer from "../tokenizer/Tokenizer";
+import TokenizerState from "../tokenizer/TokenizerState";
 
 const defaultOptions = {
     scripting: false,
@@ -8,6 +8,9 @@ const defaultOptions = {
 };
 
 class Parser {
+    private options: Object;
+    private tokenizer: Tokenizer;
+
     construction(options) {
         if (options)
             this.options = { ...defaultOptions, ...options };

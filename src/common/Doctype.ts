@@ -1,8 +1,8 @@
-export const validDoctypeName = "html";
-export const validSystemID = "about:legacy-compat";
+export const ValidDoctypeName = "html";
+export const ValidSystemID = "about:legacy-compat";
 
-export const quirksModeSystemID = "http://www.ibm.com/data/dtd/v11/ibmxhtml1-transitional.dtd";
-export const quirksModePublicIDPrefixes = [
+export const QuirksModeSystemID = "http://www.ibm.com/data/dtd/v11/ibmxhtml1-transitional.dtd";
+export const QuirksModePublicIDPrefixes = [
     "+//silmaril//dtd html pro v0r11 19970101//",
     "-//as//dtd html 3.0 aswedit + extensions//",
     "-//advasoft ltd//dtd html 3.0 aswedit + extensions//",
@@ -59,20 +59,20 @@ export const quirksModePublicIDPrefixes = [
     "-//webtechs//dtd mozilla html 2.0//",
     "-//webtechs//dtd mozilla html//"
 ];
-export const quirksModeNoSystemIDPublicIDPrefixes = quirksModePublicIDPrefixes.concat([
+export const QuirksModeNoSystemIDPublicIDPrefixes = QuirksModePublicIDPrefixes.concat([
     "-//w3c//dtd html 4.01 frameset//",
     "-//w3c//dtd html 4.01 transitional//"
 ]);
-export const quirksModePublicIDs = [
+export const QuirksModePublicIDs = [
     "-//w3o//dtd w3 html strict 3.0//en//",
     "-/w3c/dtd html 4.0 transitional/en",
     "html"
 ];
-export const limitedQuirksPublicIDPrefixes = [
+export const LimitedQuirksPublicIDPrefixes = [
     "-//w3c//dtd xhtml 1.0 frameset//",
     "-//w3c//dtd xhtml 1.0 transitional//"
 ];
-export const limitedQuirksWithSystemIDPublicPrefixes = limitedQuirksPublicIDPrefixes.concat([
+export const LimitedQuirksWithSystemIDPublicPrefixes = LimitedQuirksPublicIDPrefixes.concat([
     "-//w3c//dtd html 4.01 frameset//",
     "-//w3c//dtd html 4.01 transitional//"
 ]);

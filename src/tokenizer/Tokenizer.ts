@@ -1,4 +1,4 @@
-import TokenizerState from "./state";
+import TokenizerState from "./TokenizerState";
 
 class Tokenizer {
 

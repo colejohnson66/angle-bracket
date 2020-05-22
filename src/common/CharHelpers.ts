@@ -4,12 +4,12 @@
 
 // A surrogate is a code point that is in the range U+D800 to U+DFFF,
 //   inclusive.
-export function isSurrogate(c) {
+export function isSurrogate(c: number): boolean {
     return c >= 0xD800 && c <= 0xDFFF;
 }
 
 // A scalar value is a code point that is not a surrogate.
-export function isScalar(c) {
+export function isScalar(c: number): boolean {
     return !isSurrogate(c);
 }
 
@@ -19,7 +19,7 @@ export function isScalar(c) {
 //   U+7FFFF, U+8FFFE, U+8FFFF, U+9FFFE, U+9FFFF, U+AFFFE, U+AFFFF, U+BFFFE,
 //   U+BFFFF, U+CFFFE, U+CFFFF, U+DFFFE, U+DFFFF, U+EFFFE, U+EFFFF, U+FFFFE,
 //   U+FFFFF, U+10FFFE, or U+10FFFF.
-export function isNoncharacter(c) {
+export function isNoncharacter(c: number): boolean {
     return (c >= 0xFDD0 && c <= 0xFDEF) || c === 0xFFFE || c === 0xFFFF ||
         c === 0x1FFFE || c === 0x1FFFF || c === 0x2FFFE || c === 0x2FFFF ||
         c === 0x3FFFE || c === 0x3FFFF || c === 0x4FFFE || c === 0x4FFFF ||
@@ -30,80 +30,80 @@ export function isNoncharacter(c) {
 
 // An ASCII code point is a code point in the range U+0000 NULL to
 //   U+007F DELETE, inclusive
-export function isAsciiCodePoint(c) {
+export function isAsciiCodePoint(c: number): boolean {
     return c >= 0 && c <= 0x7F;
 }
 
 // An ASCII tab or newline is U+0009 TAB, U+000A LF, or U+000D CR.
-export function isAsciiTabOrNewline(c) {
+export function isAsciiTabOrNewline(c: number): boolean {
     return c == 9 || c == 0xA || c == 0xD;
 }
 
 // ASCII whitespace is U+0009 TAB, U+000A LF, U+000C FF, U+000D CR, or
 //   U+0020 SPACE.
-export function isAsciiWhitespace(c) {
+export function isAsciiWhitespace(c: number): boolean {
     return c == 9 || c == 0xA || c == 0xC || c == 0xD || c == 0x20;
 }
 
 // A C0 control is a code point in the range U+0000 NULL to
 //   U+001F INFORMATION SEPARATOR ONE, inclusive.
-export function isC0Control(c) {
+export function isC0Control(c: number): boolean {
     return c >= 0 && c <= 0x1F;
 }
 
 // A C0 control or space is a C0 control or U+0020 SPACE.
-export function isC0ControlOrSpace(c) {
+export function isC0ControlOrSpace(c: number): boolean {
     return isC0Control(c) || c == 0x20;
 }
 
 // A control is a C0 control or a code point in the range U+007F DELETE
 //   to U+009F APPLICATION PROGRAM COMMAND, inclusive.
-export function isControl(c) {
+export function isControl(c: number): boolean {
     return isC0Control(c) || (c >= 0x7F && c <= 0x9F);
 }
 
 // An ASCII digit is a code point in the range U+0030 (0) to U+0039 (9),
 //   inclusive.
-export function isAsciiDigit(c) {
+export function isAsciiDigit(c: number): boolean {
     return c >= 0x30 && c <= 0x39;
 }
 
 // An ASCII upper hex digit is an ASCII digit or a code point in the range
 //   U+0041 (A) to U+0046 (F), inclusive.
-export function isAsciiUpperHexDigit(c) {
+export function isAsciiUpperHexDigit(c: number): boolean {
     return c >= 0x41 && c <= 0x46;
 }
 
 // An ASCII lower hex digit is an ASCII digit or a code point in the range
 //   U+0061 (a) to U+0066 (f), inclusive.
-export function isAsciiLowerHexDigit(c) {
+export function isAsciiLowerHexDigit(c: number): boolean {
     return c >= 0x61 && c <= 0x66;
 }
 
 // An ASCII hex digit is an ASCII upper hex digit or ASCII lower hex digit.
-export function isAsciiHexDigit(c) {
+export function isAsciiHexDigit(c: number): boolean {
     return isAsciiUpperHexDigit(c) || isAsciiLowerHexDigit(c);
 }
 
 // An ASCII upper alpha is a code point in the range U+0041 (A) to U+005A (Z),
 //   inclusive.
-export function isAsciiUpperAlpha(c) {
+export function isAsciiUpperAlpha(c: number): boolean {
     return c >= 0x41 && c <= 0x5A;
 }
 
 // An ASCII lower alpha is a code point in the range U+0061 (a) to U+007A (z),
 //   inclusive.
-export function isAsciiLowerAlpha(c) {
+export function isAsciiLowerAlpha(c: number): boolean {
     return c >= 0x61 && c <= 0x7A;
 }
 
 // An ASCII alpha is an ASCII upper alpha or ASCII lower alpha.
-export function isAsciiAlpha(c) {
+export function isAsciiAlpha(c: number): boolean {
     return isAsciiUpperAlpha(c) || isAsciiLowerAlpha(c);
 }
 
 // An ASCII alphanumeric is an ASCII digit or ASCII alpha.
-export function isAsciiAlphanumeric(c) {
+export function isAsciiAlphanumeric(c: number): boolean {
     return isAsciiDigit(c) || isAsciiAlpha(c);
 }
 
