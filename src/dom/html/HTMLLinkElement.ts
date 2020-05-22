@@ -1,3 +1,4 @@
+import { DOMTokenList } from "../base/index";
 import HTMLElement from "./HTMLElement";
 
 /* https://html.spec.whatwg.org/multipage/semantics.html#the-link-element
@@ -22,7 +23,6 @@ import HTMLElement from "./HTMLElement";
  * };
  * HTMLLinkElement includes LinkStyle;
  */
-// TODO: relList and sizes is of type `DOMTokenList` and exists in base IDL
 class HTMLLinkElement extends HTMLElement {
     constructor() {
         super();
@@ -42,8 +42,8 @@ class HTMLLinkElement extends HTMLElement {
     get as(): string { throw ""; }
     set as(value: string) { throw ""; }
 
-    get relList() { throw ""; }
-    set relList(value) { throw ""; }
+    get relList(): DOMTokenList { throw ""; }
+    set relList(value: DOMTokenList) { throw ""; }
 
     get media(): string { throw ""; }
     set media(value: string) { throw ""; }
@@ -57,8 +57,8 @@ class HTMLLinkElement extends HTMLElement {
     get type(): string { throw ""; }
     set type(value: string) { throw ""; }
 
-    get sizes() { throw ""; }
-    set sizes(value) { throw ""; }
+    get sizes(): DOMTokenList { throw ""; }
+    set sizes(value: DOMTokenList) { throw ""; }
 
     get imageSrcset(): string { throw ""; }
     set imageSrcset(value: string) { throw ""; }
