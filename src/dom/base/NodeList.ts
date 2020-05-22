@@ -11,7 +11,9 @@
 // TODO: Proxies?
 class NodeList {
     item(index: number): Node | null { throw ""; }
+
     get length(): number { throw ""; }
+
     [Symbol.iterator]() { throw ""; }
 }
 

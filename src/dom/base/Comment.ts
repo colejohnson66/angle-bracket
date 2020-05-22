@@ -8,11 +8,9 @@ import CharacterData from "./CharacterData";
  * };
  */
 class Comment extends CharacterData {
-    private _data: string;
-
     constructor(data = "") {
         super();
-        this._data = data;
+        throw "";
     }
 }
 

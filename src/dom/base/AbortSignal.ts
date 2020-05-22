@@ -13,7 +13,6 @@ class AbortSignal {
 
 
     get onabort() { throw ""; }
-
     set onabort(value) { throw ""; }
 }
 

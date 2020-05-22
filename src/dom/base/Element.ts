@@ -74,17 +74,14 @@ class Element extends Node {
 
 
     get id(): string { throw ""; }
-
     set id(value: string) { throw ""; }
 
     get className(): string { throw ""; }
-
     set className(value: string) { throw ""; }
 
     get classList(): DOMTokenList { throw ""; }
 
     get slot(): string { throw ""; }
-
     set slot(value: string) { throw ""; }
 
 

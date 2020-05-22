@@ -26,7 +26,6 @@ class Attr extends Node {
     get name(): string { throw ""; }
 
     get value(): string { throw ""; }
-
     set value(value: string) { throw ""; }
 
 

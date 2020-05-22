@@ -113,11 +113,9 @@ class Node extends EventTarget {
 
 
     get nodeValue(): string | null { throw ""; }
-
     set nodeValue(value: string | null) { throw ""; }
 
     get textContent(): string | null { throw ""; }
-
     set textContent(value: string | null) { throw ""; }
 
     normalize(): void { }

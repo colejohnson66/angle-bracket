@@ -20,7 +20,6 @@ class ShadowRoot extends DocumentFragment {
     get host(): Element { throw ""; }
 
     get onslotchange() { throw ""; }
-
     set onslotchange(value) { throw ""; }
 }
 

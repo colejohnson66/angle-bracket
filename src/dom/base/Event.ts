@@ -67,7 +67,6 @@ class Event {
     stopPropagation(): void { throw ""; }
 
     get cancelBubble(): boolean { throw ""; }
-
     set cancelBubble(value: boolean) { throw ""; } // historical alias of .stopPropagation
 
     stopImmediatePropagation(): void { throw ""; }
@@ -78,7 +77,6 @@ class Event {
     get cancelable(): boolean { throw ""; }
 
     get returnValue(): boolean { throw ""; } // historical
-
     set returnValue(value: boolean) { throw ""; } // historical
 
     get defaultPrevented(): boolean { throw ""; }

@@ -17,7 +17,6 @@ import NonDocumentTypeChildNode from "./mixin/NonDocumentTypeChildNode";
  */
 class CharacterData extends Node {
     get data(): string { throw ""; }
-
     set data(value: string) { throw ""; }
 
     get length(): number { throw ""; }
