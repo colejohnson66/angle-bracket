@@ -1,6 +1,7 @@
 import DocumentFragment from "./DocumentFragment";
 import DocumentOrShadowRoot from "./mixin/DocumentOrShadowRoot";
 import Element from "./Element";
+import { applyMixins } from "../../applyMixins";
 
 /* https://dom.spec.whatwg.org/#interface-shadowroot
  *
@@ -23,7 +24,7 @@ class ShadowRoot extends DocumentFragment {
     set onslotchange(value) { throw ""; }
 }
 
-Object.assign(ShadowRoot.prototype, DocumentOrShadowRoot);
+applyMixins(ShadowRoot, DocumentOrShadowRoot);
 
 type ShadowRootMode = "open" | "closed";
 

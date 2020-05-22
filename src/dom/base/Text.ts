@@ -1,5 +1,6 @@
 import CharacterData from "./CharacterData";
 import Slottable from "./mixin/Slottable";
+import { applyMixins } from "../../applyMixins";
 
 /* https://dom.spec.whatwg.org/#interface-text
  *
@@ -23,6 +24,6 @@ class Text extends CharacterData {
     get wholeText(): string { throw ""; }
 }
 
-Object.assign(Text.prototype, Slottable);
+applyMixins(Text, Slottable);
 
 export default Text;

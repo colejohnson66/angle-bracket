@@ -16,6 +16,7 @@ import ProcessingInstruction from "./ProcessingInstruction";
 import Range from "./Range";
 import Text from "./Text";
 import XPathEvaluatorBase from "./mixin/XPathEvaluatorBase";
+import { applyMixins } from "../../applyMixins";
 
 /* https://dom.spec.whatwg.org/#interface-document
  *
@@ -143,9 +144,11 @@ class Document extends Node {
     createTreeWalker(root: Node, whatToShow: number = NodeFilter.SHOW_ALL, filter: NodeFilter = null): NodeIterator { throw ""; }
 }
 
-Object.assign(Document.prototype, DocumentOrShadowRoot);
-Object.assign(Document.prototype, ParentNode);
-Object.assign(Document.prototype, XPathEvaluatorBase);
+applyMixins(Document, [
+    DocumentOrShadowRoot,
+    ParentNode,
+    XPathEvaluatorBase
+]);
 
 class XMLDocument extends Document { }
 

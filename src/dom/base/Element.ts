@@ -9,6 +9,7 @@ import ParentNode from "./mixin/ParentNode";
 import ShadowRoot from "./ShadowRoot";
 import { ShadowRootMode } from "./ShadowRoot";
 import Slottable from "./mixin/Slottable";
+import { applyMixins } from "../../applyMixins";
 
 /* https://dom.spec.whatwg.org/#interface-element
  *
@@ -145,10 +146,12 @@ class Element extends Node {
     insertAdjacentText(where: string, data: string): void { throw ""; } // historical
 }
 
-Object.assign(Element.prototype, ChildNode);
-Object.assign(Element.prototype, NonDocumentTypeChildNode);
-Object.assign(Element.prototype, ParentNode);
-Object.assign(Element.prototype, Slottable);
+applyMixins(Element, [
+    ChildNode,
+    NonDocumentTypeChildNode,
+    ParentNode,
+    Slottable
+]);
 
 class ShadowRootInit {
     static readonly default: ShadowRootInit = {

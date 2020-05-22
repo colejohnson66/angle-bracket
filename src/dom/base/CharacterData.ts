@@ -1,6 +1,7 @@
 import ChildNode from "./mixin/ChildNode";
 import Node from "./Node";
 import NonDocumentTypeChildNode from "./mixin/NonDocumentTypeChildNode";
+import { applyMixins } from "../../applyMixins";
 
 /* https://dom.spec.whatwg.org/#interface-characterdata
  *
@@ -32,7 +33,9 @@ class CharacterData extends Node {
     replaceData(offset: number, count: number, data: string) { throw ""; }
 }
 
-Object.assign(CharacterData.prototype, ChildNode);
-Object.assign(CharacterData.prototype, NonDocumentTypeChildNode);
+applyMixins(CharacterData, [
+    ChildNode,
+    NonDocumentTypeChildNode
+]);
 
 export default CharacterData;

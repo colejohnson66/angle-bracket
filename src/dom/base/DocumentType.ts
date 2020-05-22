@@ -1,5 +1,6 @@
 import ChildNode from "./mixin/ChildNode";
 import Node from "./Node";
+import { applyMixins } from "../../applyMixins";
 
 /* https://dom.spec.whatwg.org/#interface-documenttype
  *
@@ -18,6 +19,6 @@ class DocumentType extends Node {
     get systemId(): string { throw ""; }
 }
 
-Object.assign(DocumentType.prototype, ChildNode);
+applyMixins(DocumentType, ChildNode);
 
 export default DocumentType;

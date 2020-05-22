@@ -1,4 +1,5 @@
 import XPathEvaluatorBase from "./mixin/XPathEvaluatorBase";
+import { applyMixins } from "../../applyMixins";
 
 /* https://dom.spec.whatwg.org/#interface-xpathevaluator
  *
@@ -13,6 +14,6 @@ class XPathEvaluator {
     constructor() { throw ""; }
 }
 
-Object.assign(XPathEvaluator.prototype, XPathEvaluatorBase);
+applyMixins(XPathEvaluator, XPathEvaluatorBase);
 
 export default XPathEvaluator;

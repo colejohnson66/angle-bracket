@@ -1,5 +1,6 @@
 import Node from "./Node";
 import ParentNode from "./mixin/ParentNode";
+import { applyMixins } from "../../applyMixins";
 
 /* https://dom.spec.whatwg.org/#interface-documentfragment
  *
@@ -15,6 +16,6 @@ class DocumentFragment extends Node {
     }
 }
 
-Object.assign(DocumentFragment.prototype, ParentNode);
+applyMixins(DocumentFragment, ParentNode);
 
 export default DocumentFragment;
