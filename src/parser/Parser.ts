@@ -1,4 +1,4 @@
-import InsertionMode from "./ParseMode";
+import InsertionMode from "./InsertionMode";
 import Tokenizer from "../tokenizer/Tokenizer";
 import TokenizerState from "../tokenizer/TokenizerState";
 
